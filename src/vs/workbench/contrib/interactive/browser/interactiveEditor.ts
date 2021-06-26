@@ -335,3 +335,17 @@ export class InteractiveEditor extends EditorPane {
 		};
 	}
 }
+
+export const interactiveInputEditorBackground = registerColor('interactive.inputEditorBackground', {
+	dark: peekViewEditorBackground,
+	light: peekViewEditorBackground,
+	hc: peekViewEditorBackground
+}, nls.localize('interactive.inputEditorBackground', "The background color of the input editor."));
+
+registerThemingParticipant((theme, collector) => {
+	const editorBackgroundColor = theme.getColor(interactiveInputEditorBackground) ?? theme.getColor(interactiveInputEditorBackground);
+	if (editorBackgroundColor) {
+		collector.addRule(`.interactive-editor .input-editor-container,
+		.interactive-editor .input-editor-container .monaco-editor-background { background: ${editorBackgroundColor}; }`);
+	}
+});
