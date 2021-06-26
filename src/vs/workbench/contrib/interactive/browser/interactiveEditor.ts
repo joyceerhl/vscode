@@ -37,6 +37,7 @@ import { INTERACTIVE_INPUT_CURSOR_BOUNDARY } from 'vs/workbench/contrib/interact
 import { IInteractiveHistoryService } from 'vs/workbench/contrib/interactive/browser/interactiveHistoryService';
 import { peekViewEditorBackground } from 'vs/editor/contrib/peekView/peekView';
 import { IInteractiveDocumentService } from 'vs/workbench/contrib/interactive/browser/interactiveDocumentService';
+import { peekViewEditorBackground } from 'vs/editor/contrib/peekView/peekView';
 
 const DECORATION_KEY = 'interactiveInputDecoration';
 const INPUT_CONTAINER_PADDING = 10;
